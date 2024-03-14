@@ -1,11 +1,23 @@
-class Book extends Item {
-    private String author;
-    private int numberOfPages;
-    private String genre;
+abstract class Item {
+    public String name;
+    private String description;
+    protected String ID;
+    float price;
 
-    public Book(String name, String description, String ID, float price, String author, int numberOfPages, String genre) {
-        super(name, description, ID, price);
-        this.author = author;
-        this.numberOfPages = numberOfPages;
-        this.genre = genre;
+    public Item(String name, String description, String ID, float price) {
+        this.name = name;
+        this.description = description;
+        this.ID = ID;
+        this.price = price;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public abstract void showInfo();
+}
