@@ -10,3 +10,14 @@ abstract class Item {
         this.ID = ID;
         this.price = price;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public abstract void showInfo();
+}
